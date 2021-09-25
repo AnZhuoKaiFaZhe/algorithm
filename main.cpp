@@ -21,35 +21,48 @@ void maopaoSort(int a[],int len){
     }
 }
 
-void quickSort(int a[],int l,int r){
-    if(l>=r){
-        return;
-    }
-    int povit=a[l],i=l+1,mid=l;
-    while (i++<r){
-        if(a[i]<povit){
-            mid++;
+//void quickSort(int a[],int l,int r){
+//    if(l>=r){
+//        return;
+//    }
+//    int povit=a[l],i=l+1,mid=l;
+//    while (i++<r){
+//        if(a[i]<povit){
+//            mid++;
+//        }
+//    }
+//    quickSort(a,l,mid-1);
+//    quickSort(a,mid+1,r);
+//}
+
+int partition(int *arr, int L, int R)
+{
+    int i, j = L;
+    int pivot = arr[R];
+    for (i = L; i < R; i++)
+    {
+        if (arr[i] < pivot)
+        {
+            int temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+            j++;
         }
     }
-    i=l;int j=r;
-    while(i<mid&&j>mid){
-        if(a[i]<povit){i++;}
-        else if (a[j]>povit){j--;}
-        if(a[i]>povit&&a[j]<povit){
-            int tmp = a[i];
-            a[i] = a[j];
-            a[j] = tmp;
-            i++;
-            j--;
-        }
+    int temp = arr[R];
+    arr[R] = arr[j];
+    arr[j] = temp;
+    return j;
+}
+void quickSort(int *arr, int L, int R)
+{
+    if (L < R) {
+        int m = partition(arr, L, R);
+        quickSort(arr, L, m - 1);
+        quickSort(arr, m + 1, R);
     }
-    if(i==mid){
-        a[i]=povit;
-    }else{
-        a[j]=povit;
-    }
-    quickSort(a,l,mid-1);
-    quickSort(a,mid+1,r);
+
+
 }
 
 int main() {
