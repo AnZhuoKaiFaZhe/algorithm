@@ -31,9 +31,16 @@ int main() {
      * 快速排序
      */
 
-    quickSort(a,0,len-1);
-        for(int i=0;i<len;i++){
-        printf("%d ",a[i]);
-    }
+//    quickSort(a,0,len-1);
+//        for(int i=0;i<len;i++){
+//        printf("%d ",a[i]);
+//    }
+
+    /*
+     * 快排自写
+     */
+
+    quickSort1(a,0,len-1);
+
     return 0;
 }
