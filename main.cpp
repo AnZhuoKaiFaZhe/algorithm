@@ -1,5 +1,6 @@
 #include <iostream>
 #include "./sort/Sort.h"
+#include " factorial.h"
 
 int getMax(int a[],int len){
     int max = a[0];
@@ -37,10 +38,10 @@ int main() {
 //    }
 
     /*
-     * 快排自写
+     * 求阶乘
      */
-
-    quickSort1(a,0,len-1);
+    int r=factorial(4);
+    printf("%d",r);
 
     return 0;
 }
