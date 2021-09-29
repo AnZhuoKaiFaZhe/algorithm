@@ -40,8 +40,22 @@ int main() {
     /*
      * 求阶乘
      */
-    int r=factorial(4);
-    printf("%d",r);
+//    int r=factorial(5);
+//    printf("%d",r);
 
+    /*
+     * 输出数组
+     */
+//        for(int i=0;i<len;i++){
+//        printf("%d ",a[i]);
+//    }
+//
+        HeapSort(a,len);
+
+        printf("\n");
+
+    for(int i=0;i<len;i++) {
+        printf("%d ", a[i]);
+    }
     return 0;
 }

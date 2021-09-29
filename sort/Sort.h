@@ -8,5 +8,7 @@
 void maopaoSort(int a[],int len);//冒泡排序
 void quickSort(int *arr, int L, int R);//快速排序
 void quickSort1(int a[],int l,int r);//快排自写
+void HeapSort(int a[],int len);//堆排序
+
 
 #endif //ALGORITHM_SORT_H
