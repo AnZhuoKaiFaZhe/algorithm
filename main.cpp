@@ -50,14 +50,17 @@ int main(int argc,char *argv[]) {
 //        for(int i=0;i<len;i++){
 //        printf("%d ",a[i]);
 //    }
+
+        /*
+         * 堆排序
+         */
+//        HeapSort(a,len);
 //
-        heap_sort(a,len);
-
-        printf("\n");
-
-    for(int i=0;i<len;i++) {
-        printf("%d ", a[i]);
-    }
+//        printf("\n");
+//
+//    for(int i=0;i<len;i++) {
+//        printf("%d ", a[i]);
+//    }
 
     /*
      * 作业1
